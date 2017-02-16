@@ -21,7 +21,7 @@ module.exports = {
     loaders: [{
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader', 'ng-template-loader']
+        loaders: ['babel-loader', 'ngx-template-loader']
       },
       {
         test: /\.html$/,
