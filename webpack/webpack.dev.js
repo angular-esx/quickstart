@@ -1,10 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || 'localhost';
+
 module.exports = {
   devServer: {
-    port: 3000,
-    host: 'localhost'
+    port: PORT,
+    host: HOST
   },
   entry: {
     polyfill: './src/polyfill.js',
@@ -14,8 +17,9 @@ module.exports = {
   output: {
     publicPath: '/',
     path: './dist',
-    filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[id].[chunkhash].js',
+    sourceMapFilename: '[file].map'
   },
   module: {
     loaders: [{
@@ -29,7 +33,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'raw-loader'
+        loader: 'raw-loader', // load style file as to string
+        exclude: /\/src\/styles/ // exclude /src/styles
+      },
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader'], // load global styles
+        include: /\/src\/styles/ // include /src/styles
       }
     ]
   },
@@ -42,5 +52,15 @@ module.exports = {
       name: ['app', 'vendor', 'polyfill']
     })
 
-  ]
+  ],
+  devServer: {
+    port: PORT,
+    host: HOST,
+    inline: true,
+    historyApiFallback: true,
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
+  },
 }

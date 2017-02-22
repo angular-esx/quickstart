@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npm run webpack",
-    "webpack": "webpack-dev-server --config webpack/webpack.dev.js --watch"
+    "webpack": "webpack-dev-server --config webpack/webpack.dev.js --open --watch --content-base src/"
   },
   "license": "MIT",
   "dependencies": {
