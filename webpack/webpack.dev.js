@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const helpers = require('./helpers');
 
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || 'localhost';
@@ -34,12 +35,12 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'raw-loader', // load style file as to string
-        exclude: /\/src\/styles/ // exclude /src/styles
+        exclude: helpers.root('src', 'styles') // exclude /src/styles
       },
       {
         test: /\.css$/,
         loader: ['style-loader', 'css-loader'], // load global styles
-        include: /\/src\/styles/ // include /src/styles
+        include: helpers.root('src', 'styles') // include /src/styles
       }
     ]
   },
