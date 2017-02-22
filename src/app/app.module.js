@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import AppComponent from './app.component';
+import { AppComponent } from './app.component';
 
-const AppModule = NgModule({
+export const AppModule = NgModule({
   imports: [
     BrowserModule,
   ],
@@ -15,5 +15,3 @@ const AppModule = NgModule({
 }).Class({
   constructor: function() {}
 });
-
-export default AppModule;
