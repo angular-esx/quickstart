@@ -1,9 +1,9 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const helpers = require('./helpers');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+var helpers = require('./helpers');
 
-const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || 'localhost';
+var PORT = process.env.PORT || 3000;
+var HOST = process.env.HOST || 'localhost';
 
 module.exports = {
   devServer: {
