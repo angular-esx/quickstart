@@ -97,3 +97,4 @@ You're ready to write your application.
 We've captured many of the most useful commands in npm scripts defined in the `package.json`:
 
 * `npm start` - runs the compiler and a server at the same time, both in "watch mode".
+* `npm run build` - runs the webpack build for production.
