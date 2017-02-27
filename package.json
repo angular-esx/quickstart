@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npm run webpack",
-    "webpack": "webpack-dev-server --config config/webpack.dev.js --open --watch --content-base src/"
+    "webpack": "webpack-dev-server --config config/webpack.dev.js --open --watch --content-base src/",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile"
   },
   "license": "MIT",
   "dependencies": {
@@ -30,8 +31,11 @@
     "html-webpack-plugin": "^2.26.0",
     "ngx-template-loader": "0.0.1",
     "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.13.1",
+    "uglifyjs-webpack-plugin": "^0.2.1",
     "webpack": "^2.2.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^3.0.0"
   }
 }
