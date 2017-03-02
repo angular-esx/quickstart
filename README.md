@@ -6,9 +6,6 @@ the foundation for most of the documentation samples and potentially a good star
 **This is not the perfect arrangement for your application. It is not designed for production.
 It exists primarily to get you started quickly with learning and prototyping in Angular**
 
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
-
 ## Updating to a newer version of the Quickstart Repo
 
 From time to time the QuickStart will add be enhanced with support for new features or to reflect changes
