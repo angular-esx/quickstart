@@ -9,4 +9,4 @@ AppComponent.annotations = [
     selector: 'my-app',
     templateUrl: './app.component.html'
   })
-]
+];

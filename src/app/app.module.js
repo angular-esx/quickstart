@@ -18,4 +18,4 @@ AppModule.annotations = [
     providers: [],
     bootstrap: [AppComponent]
   })
-]
+];
