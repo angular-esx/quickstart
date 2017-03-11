@@ -3,19 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-export class AppModule {
-
-}
-
-AppModule.annotations = [
-  new NgModule({
-    imports: [
-      BrowserModule,
-    ],
-    declarations: [
-      AppComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-  })
-];
+@NgModule({
+  imports: [
+    BrowserModule,
+  ],
+  declarations: [
+    AppComponent
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
